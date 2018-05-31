@@ -1,7 +1,7 @@
 'use strict';
 
-var timeout = require('connect-timeout')
 const
+  timeout = require('connect-timeout')
 	express = require('express'),
 	bodyParser = require('body-parser'),
 	app = express().use(bodyParser.json());
