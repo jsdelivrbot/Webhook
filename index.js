@@ -4,8 +4,16 @@ const
 	express = require('express'),
 	bodyParser = require('body-parser'),
 	app = express().use(bodyParser.json());
+  app.use(timeout('5s'));
+  app.use(haltOnTimedout);
 
-app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
+  function haltOnTimedout (req, res, next) {
+  if (!req.timedout) next()
+  }
+
+  app.listen(3000)
+
+app.listen(process.env.PORT || 1337, timeout('5s'), haltOnTimedout, () => console.log('webhook is listening'));
 
 app.post('/webhook', (req, res) => {  
  
@@ -26,7 +34,7 @@ app.post('/webhook', (req, res) => {
 
 });
 
-app.get('/webhook', (req, res) => {
+app.get('/webhook', timeout('5s'), haltOnTimedout, (req, res) => {
 
   let VERIFY_TOKEN = "EAAIR4BeZBZAxoBALl44NOrtSexWvvUTHWwRyLdCNZCZCUisqZAnk9Hx6LOo8uAONHmN51veZByfLB5gVAOSaRmRguJ6A0yaW26yXnsOPrRHS3Hf7qbdFRxFe8Vh5CcNfiCnnVBkO0UrY7rgmlbLkW3hZCTZAJ3Mnu7iF9QgSkcOdNO3aTg0lmteG"
     
