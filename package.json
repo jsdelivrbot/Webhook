@@ -1,17 +1,23 @@
 {
-  "name": "Webhook",
+  "name": "webhook",
   "version": "1.0.0",
-  "description": "",
+  "description": "Webhook for facebook messenger",
   "main": "index.js",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3"
-  },
-  "devDependencies": {},
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NebojsaSalai/Webhook.git"
+  },
+  "author": "Nebojsa Salai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NebojsaSalai/Webhook/issues"
+  },
+  "homepage": "https://github.com/NebojsaSalai/Webhook#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
