@@ -28,7 +28,7 @@ app.post('/webhook', (req, res) => {
 
 app.get('/webhook', (req, res) => {
 
-  let VERIFY_TOKEN = "EAAIR4BeZBZAxoBAJtfH9uihMEd9ghxqFa0bUBt0KagLkwun480jvbiuZAA8H8Ir4y0tjhGQWkX6nvkkvZCvG0ydaeKIPZCWe2m4R21CUvxi4ihZCmcAC5CagB5Sr4DT2bnbVu9dzBwhRB1LUCWH9sT67LD6Q9ezFch2ZCUgZBgeWrNlf1StQNQjb"
+  let VERIFY_TOKEN = "EAAIR4BeZBZAxoBAHPNxC6qeZC6dQXmWZAqZBqAZCm5NqZA7xVd75SCZCGpQ6cuCBi1Nt0ZBb7POUZAYUzqCe5Bdlao7PdgHroYoug62tHZCuaDwc0ZC96Gg8XnDnkvjsOpua4PeMHFNk8qrYfHZC3LQR1VIWt2g9NjnZBJu67AmhuXZBK8k9mZAizTLaObVj"
     
   let mode = req.query['hub.mode'];
   let token = req.query['hub.verify_token'];
