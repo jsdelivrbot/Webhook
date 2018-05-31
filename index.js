@@ -1,5 +1,6 @@
 'use strict';
 
+var timeout = require('connect-timeout')
 const
 	express = require('express'),
 	bodyParser = require('body-parser'),
